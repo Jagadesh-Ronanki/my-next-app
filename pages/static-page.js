@@ -1,5 +1,3 @@
-import { GetServerSidePropsContext } from "next";
-
 // pages/static-page.js
 export default function StaticPage() {
     return (
@@ -23,7 +21,7 @@ export default function StaticPage() {
 //   }
 
   
-  export async function getServerSideProps(context: GetServerSidePropsContext) {
+  export async function getServerSideProps(context) {
     const userAgent = context.req.headers['user-agent'];
     return {
       props: {
